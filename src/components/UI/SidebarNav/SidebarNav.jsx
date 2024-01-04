@@ -14,8 +14,8 @@ const SidebarNav = ({ items, selected, onItemClick }) => {
             {items.map((item) => (
               <a href="#"
                 key={item.id}
-                className={`flex items-center justify-between rounded-md transition duration-500 p-4 bg-white hover:bg-black hover:text-white hover:shadow-md ${
-                  selected === item.id ? 'bg-orange-700 text-white hover:bg-orange-700' : ''
+                className={`flex items-center justify-between rounded-md transition duration-200 p-4 bg-white ${
+                  selected === item.id ? 'bg-orange-700 text-white' : ''
                 }`}
                 onClick={() => onItemClick(item.id)}
               >
