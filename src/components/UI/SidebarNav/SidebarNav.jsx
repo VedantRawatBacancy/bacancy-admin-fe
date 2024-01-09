@@ -18,7 +18,7 @@ const SidebarNav = ({ items, selected, onItemClick }) => {
                 key={item.id}
                 to={`/${item.setPath}`}
                 className={`flex items-center justify-between rounded-md transition duration-200 p-4 bg-white ${
-                  selected === item.id ? 'bg-orange-700 text-white' : ''
+                  selected === item.id ? 'bg-orange-500 text-white' : ''
                 }`}
                 onClick={() => onItemClick(item.id)}
               >
@@ -31,7 +31,7 @@ const SidebarNav = ({ items, selected, onItemClick }) => {
           </ul>
 
           <ul className="py-3 space-y-4 p-3">
-            <a href="#" className="flex items-center rounded-md transition duration-200 p-4 bg-white hover:bg-orange-700 hover:text-white">
+            <a href="#" className="flex items-center rounded-md transition duration-200 p-4 bg-white hover:bg-orange-500 hover:text-white">
             <div className="row flex flex-row items-center w-100">
                 <div className='col-md-6 p-1'><LuPower /></div>
                 <div className='col-md-6 p-1'>Logout</div>

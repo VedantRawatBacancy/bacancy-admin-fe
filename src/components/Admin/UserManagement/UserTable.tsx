@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   createColumnHelper,
   flexRender,
@@ -13,29 +13,26 @@ type User = {
   role: string;
 };
 
-const defaultData = Users;
+const defaultData: User[] = Users;
 
-const columnHelper = createColumnHelper<User>();
+const columnHelper = createColumnHelper();
 
 const columns = [
   columnHelper.accessor("firstName", {
     cell: (info) => info.getValue(),
-    footer: (info) => info.column.id,
   }),
-  columnHelper.accessor((row) => row.lastName, {
-    id: "lastName",
-    cell: (info) => <i>{info.getValue()}</i>,
-    header: () => <span>Last Name</span>,
-    footer: (info) => info.column.id,
+  columnHelper.accessor("lastName", {
+    cell: (info) => info.getValue(),
   }),
   columnHelper.accessor("role", {
-    header: "Role",
-    footer: (info) => info.column.id,
+    cell: (info) => info.getValue(),
   }),
 ];
 function UsersTable() {
+  const [data, setData] = useState(() => [...defaultData]);
+  console.log(columns);
   const table = useReactTable({
-    defaultData,
+    data,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
