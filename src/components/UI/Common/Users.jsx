@@ -1,11 +1,11 @@
 export const Users = [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
-      "password": "securepassword123",
-      "role": "admin"
+      id: 1,
+      firstName: "John",
+      lastName: "Doe",
+      email: "john.doe@example.com",
+      password: "securepassword123",
+      role: "admin"
     },
     {
       "id": 2,

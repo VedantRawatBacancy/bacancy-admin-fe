@@ -3,7 +3,10 @@ import { useState } from 'react'
 import SidebarNav from './components/UI/SidebarNav/SidebarNav'
 import { SidebarItems } from './components/UI/SidebarNav/SidebarItems'
 import MainContent from './components/UI/MainContent/MainContent';
-import Dashboard from './components/Dashboard/Dashboard';
+import AppRoutes from './routes/AppRoutes';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
 
 
 function App() {
@@ -15,12 +18,12 @@ function App() {
 
   return (
     <>
+    <Router>
       <div className="flex">
       <SidebarNav items={SidebarItems} selected={selectedId} onItemClick={onItemClick} />
-      <MainContent>
-        <Dashboard />
-      </MainContent>
+      <AppRoutes />
     </div>
+    </Router>
     </>
   )
 }

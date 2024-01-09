@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
-    "@tanstack/react-table": "^8.11.2",
+    "@tanstack/react-table": "^8.11.3",
     "axios": "^1.6.3",
     "jotai": "^2.6.1",
     "localforage": "^1.10.0",

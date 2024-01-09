@@ -2,6 +2,8 @@ import logo from '../../../assets/Sample.svg'
 import { Users } from '../Common/Users';
 import { LuPower } from "react-icons/lu";
 
+import { NavLink } from 'react-router-dom';
+
 const SidebarNav = ({ items, selected, onItemClick }) => {
     return (
         <nav className="fixed top-0 left-0 w-64 flex flex-col justify-between bg-white h-dvh text-black shadow-lg">
@@ -12,8 +14,9 @@ const SidebarNav = ({ items, selected, onItemClick }) => {
             </div>
                 <p className="flex items-center text-center uppercase p-5 align-center justify-center">Welcome {Users[1].firstName}</p>
             {items.map((item) => (
-              <a href="#"
+              <NavLink
                 key={item.id}
+                to={`/${item.setPath}`}
                 className={`flex items-center justify-between rounded-md transition duration-200 p-4 bg-white ${
                   selected === item.id ? 'bg-orange-700 text-white' : ''
                 }`}
@@ -23,7 +26,7 @@ const SidebarNav = ({ items, selected, onItemClick }) => {
                 <div className='col-md-6 p-1'>{item.icon}</div>
                 <div className='col-md-6 p-1'>{item.label}</div>
                 </div>
-              </a>
+              </NavLink>
             ))}
           </ul>
 

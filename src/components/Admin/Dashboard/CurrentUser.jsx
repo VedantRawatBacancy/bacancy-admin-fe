@@ -1,5 +1,5 @@
-import { Users } from "../UI/Common/Users";
-import Card from '../UI/Common/Card/Card'
+import { Users } from "../../UI/Common/Users";
+import Card from '../../UI/Common/Card/Card'
 
 function CurrentUser() {
     const length = Users.length;

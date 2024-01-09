@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from '../UI/Common/Card/Card'
+import Card from '../../UI/Common/Card/Card'
 
-import { Users } from '../UI/Common/Users'
+import { Users } from '../../UI/Common/Users'
 
 function UserCard() {
     const length = Users.length;
